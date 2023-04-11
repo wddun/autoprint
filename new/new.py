@@ -1,12 +1,12 @@
-from flask import Flask, render_template, send_file, redirect
 import os
+from flask import Flask, render_template, send_file, redirect
 import win32print
 import win32api
 
 app = Flask(__name__)
 
 # Define the directory to scan for PDFs
-pdf_directory = "C:\\Users\\wddun\\Desktop\\autoprint\\autoprint\\new\\pdfs"
+pdf_directory = r"C:\Users\wddun\Desktop\autoprint\new\pdfs"
 
 # Define a function to get all subdirectories in the PDF directory
 def get_subdirectories(directory):
