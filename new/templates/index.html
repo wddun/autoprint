@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PDF Directory Index</title>
+</head>
+<body>
+	<h1>PDF Directory Index</h1>
+	{% if subdirectories %}
+		<ul>
+			{% for subdirectory in subdirectories %}
+				<li><a href="/{{ subdirectory }}">{{ subdirectory }}</a></li>
+			{% endfor %}
+		</ul>
+	{% else %}
+		<p>No subdirectories found.</p>
+	{% endif %}
+</body>
+</html>
