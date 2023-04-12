@@ -1,0 +1,14 @@
+<html>
+  <head>
+    <title>Main Menu</title>
+  </head>
+  <body>
+    <h1>Main Menu</h1>
+    <p>Click on a directory to view PDF files:</p>
+    <ul>
+      {% for subdir in subdirs %}
+        <li><a href="{{ subdir }}">{{ subdir }}</a></li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
