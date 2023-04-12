@@ -1,5 +1,5 @@
 import os
-from flask import Flask, request, render_template
+from flask import Flask, request, render_template, redirect, url_for
 
 app = Flask(__name__)
 
@@ -39,7 +39,7 @@ def print_pdf():
         return 'Error: invalid file format'
     filepath = os.path.join(pdfs_dir, request.args.get('subdir', ''), file)
     os.startfile(filepath, 'print')
-    return 'Printing ' + file
+    return redirect(url_for('root'))
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
